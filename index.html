@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button type="submit" id="search-btn">Search</button>
+            <button type="button" id="mansourieh-btn">Mansourieh</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading" hidden>
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error Container -->
+        <div id="error-message" class="error-msg" hidden></div>
+
+        <!-- Weather Results -->
+        <div id="results" hidden>
+            <h2 id="place"></h2>
+            <p id="date"></p>
+
+            <div class="main-weather">
+                <div id="icon"></div>
+                <div>
+                    <h3 id="temp"></h3>
+                    <p id="conditions"></p>
+                </div>
+            </div>
+
+            <div class="extra-info">
+                <p>Feels like: <strong id="feels"></strong></p>
+                <p>Humidity: <strong id="humidity"></strong></p>
+                <p>Wind: <strong id="wind"></strong></p>
+            </div>
+
+            <h3>3-Day Forecast</h3>
+            <div id="forecast"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
